@@ -1,0 +1,21 @@
+cabal-version:      3.4
+name:               csv-converter
+version:            0.1.0.0
+license:            GPL-3.0-only
+license-file:       LICENSE
+build-type:         Simple
+
+common warnings
+  ghc-options: -Wall
+  default-extensions:
+    LambdaCase
+
+executable csv-converter
+  import:           warnings
+  main-is:          Main.hs
+  build-depends:
+      base ^>=4.17.2.1
+    , megaparsec ^>=9.7.0
+    , mtl >=2.3.1
+  hs-source-dirs:   app
+  default-language: GHC2021
